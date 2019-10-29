@@ -1,7 +1,9 @@
 const express = require('express');
 
 // 1
-const postsRouter = require('./router/posts-router.js.js')
+const postsRouter = require('./router/posts-router.js')
+const commentsRouter = require('./router/comments-router.js')
+
 
 const server = express();
 
@@ -15,6 +17,8 @@ server.get('/', (req, res) => {
 
 // 2
 server.use('/api/posts', postsRouter)
+// server.use('/api/posts', commentsRouter)
+
 
 server.listen(4000, () => {
     console.log('\n Server running on local host 4000 \n')

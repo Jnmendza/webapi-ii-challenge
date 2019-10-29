@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
 });
 
 // 2
-server.use('/api/posts', postsRouter)
+server.use('/api/posts', postsRouter, commentsRouter)
 // server.use('/api/posts', commentsRouter)
 
 

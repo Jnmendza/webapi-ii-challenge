@@ -25,10 +25,8 @@ router.post('/', (req, res) => {
 
 // GET /api/posts - returns an array of all post objs in db
 router.get('/', (req, res) => {
-    const query = req.query;
-    console.log("This is query",query)
 
-    db.find(query)
+    db.find()
         .then(posts => {
             res.status(200).json(posts)
         })
